@@ -242,6 +242,9 @@ class IntlPhoneField extends StatefulWidget {
   /// If unset, defaults to [EdgeInsets.zero].
   final EdgeInsets flagsButtonMargin;
 
+
+  final Function(PhoneNumber)? onPhoneMaxLength;
+
   //enable the autofill hint for phone number
   final bool disableAutoFillHints;
 
@@ -291,6 +294,7 @@ class IntlPhoneField extends StatefulWidget {
     this.showCursor = true,
     this.pickerDialogStyle,
     this.flagsButtonMargin = EdgeInsets.zero,
+    this.onPhoneMaxLength,
   }) : super(key: key);
 
   @override
@@ -302,6 +306,9 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
   late Country _selectedCountry;
   late List<Country> filteredCountries;
   late String number;
+
+
+
 
   String? validatorMessage;
 
@@ -429,6 +436,9 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
 
 
           validatorMessage = await widget.validator?.call(phoneNumber);
+        }
+        if (value.length == _selectedCountry.maxLength) {
+          widget.onPhoneMaxLength?.call(phoneNumber);
         }
 
         widget.onChanged?.call(phoneNumber);
