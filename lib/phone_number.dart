@@ -6,7 +6,7 @@ class NumberTooLongException implements Exception {}
 class NumberTooShortException implements Exception {}
 
 class InvalidCharactersException implements Exception {}
-class InvalidNumberException implements Exception {}
+class InvalidCountryAreaException implements Exception {}
 
 class PhoneNumber {
   String countryISOCode;
@@ -44,6 +44,10 @@ class PhoneNumber {
 
   bool isValidNumber() {
     Country country = getCountry(completeNumber);
+    if(!validate(number, country.code)){
+      throw InvalidCountryAreaException();
+
+    }
     if (number.length < country.minLength) {
       throw NumberTooShortException();
     }
@@ -51,10 +55,7 @@ class PhoneNumber {
     if (number.length > country.maxLength) {
       throw NumberTooLongException();
     }
-    if(!validate(number, country.code)){
-      throw InvalidNumberException();
 
-    }
     return true;
   }
 

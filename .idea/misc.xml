@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="3b461f7e-79c4-468f-923d-ff7ba426451a" />
+  <component name="ProjectType">
+    <option name="id" value="io.flutter" />
   </component>
 </project>
