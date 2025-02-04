@@ -1,77 +1,39 @@
-# International Phone Field Package
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!--
+This README describes the package. If you publish this package to pub.dev,
+this README's contents appear on the landing page for your package.
 
-[![pub package](https://img.shields.io/pub/v/intl_phone_field.svg)](https://pub.dev/packages/intl_phone_field)
+For information about how to write a good package README, see the guide for
+[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
 
-A customised Flutter TextFormField to input international phone number along with country code.
+For general information about developing packages, see the Dart guide for
+[creating packages](https://dart.dev/guides/libraries/create-packages)
+and the Flutter guide for
+[developing packages and plugins](https://flutter.dev/to/develop-packages).
+-->
 
-This widget can be used to make customised text field to take phone number input for any country along with an option to choose country code from a dropdown.
+TODO: Put a short description of the package here that helps potential users
+know whether this package might be useful for them.
 
-## Screenshots
+## Features
 
-<img src="https://github.com/vanshg395/intl_phone_field/blob/master/1.png?raw=true" height="500px"> <img src="https://github.com/vanshg395/intl_phone_field/blob/master/2.png?raw=true" height="500px"> <img src="https://github.com/vanshg395/intl_phone_field/blob/master/3.png?raw=true" height="500px">
+TODO: List what your package can do. Maybe include images, gifs, or videos.
 
-## Installing
+## Getting started
 
-To use this package:
+TODO: List prerequisites and provide or point to information on how to
+start using the package.
 
-Run this command:
+## Usage
 
-```yaml
-flutter pub add intl_phone_field
-```
-
-Or, add the following to your `pubspec.yaml` file:
-
-```yaml
-dependencies:
-  intl_phone_field: ^3.1.0
-```
-
-## How to Use
-
-Simply create a `IntlPhoneField` widget, and pass the required params:
+TODO: Include short and useful examples for package users. Add longer examples
+to `/example` folder.
 
 ```dart
-IntlPhoneField(
-    decoration: InputDecoration(
-        labelText: 'Phone Number',
-        border: OutlineInputBorder(
-            borderSide: BorderSide(),
-        ),
-    ),
-    initialCountryCode: 'IN',
-    onChanged: (phone) {
-        print(phone.completeNumber);
-    },
-)
+const like = 'sample';
 ```
 
-Use `initialCountryCode` to set an initial Country Code.
+## Additional information
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-Comment on Issue or Pull Request, asking @all-contributors to add a contributor:
-
-```shell
-@all-contributors please add @<username> for <contributions>
-```
-
-**\<contributions>**: See the [Emoji Key (Contribution Types Reference)](https://allcontributors.org/docs/en/emoji-key) for a list of valid contribution types.
-
-
-
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-## LICENSE
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+TODO: Tell users more about the package: where to find more information, how to
+contribute to the package, how to file issues, what response they can expect
+from the package authors, and more.
