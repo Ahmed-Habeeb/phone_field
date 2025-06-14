@@ -1,25 +1,46 @@
-import 'package:equatable/equatable.dart';
-import 'package:libphonenumber/libphonenumber.dart';
-
-class Country extends Equatable {
+/// Represents a country with its associated phone number information
+/// and validation rules.
+class Country {
+  /// The name of the country
   final String name;
-  final Map<String, String> nameTranslations;
-  final String flag;
-  final String code;
-  final String dialCode;
-  final String regionCode;
-  final int minLength;
-  final int maxLength;
-  final List<String>? validPrefixes;
-  final List<String>? validSuffixes;
-  final Map<String, dynamic>? validationRules;
-  final String? flagUrl;
-  final String? region;
-  final String? subRegion;
-  final bool isMobileOnly;
-  final bool isLandlineOnly;
-  final bool isTollFree;
 
+  /// Translations of the country name in different languages
+  final Map<String, String> nameTranslations;
+
+  /// The flag emoji or flag image path for the country
+  final String flag;
+
+  /// The ISO country code (e.g., 'US', 'GB')
+  final String code;
+
+  /// The country's dial code (e.g., '+1', '+44')
+  final String dialCode;
+
+  /// Optional region code for countries with multiple regions
+  final String regionCode;
+
+  /// Minimum length of valid phone numbers for this country
+  final int minLength;
+
+  /// Maximum length of valid phone numbers for this country
+  final int maxLength;
+
+  /// Regular expression pattern for phone number validation
+  final String pattern;
+
+  /// List of characters allowed in phone numbers
+  final List<String> allowedCharacters;
+
+  /// Whether the country requires an area code
+  final bool requiresAreaCode;
+
+  /// Pattern for validating area codes
+  final String? areaCodePattern;
+
+  /// Example phone number format for this country
+  final String? exampleNumber;
+
+  /// Creates a new Country instance
   const Country({
     required this.name,
     required this.flag,
@@ -29,144 +50,123 @@ class Country extends Equatable {
     required this.minLength,
     required this.maxLength,
     this.regionCode = "",
-    this.validPrefixes,
-    this.validSuffixes,
-    this.validationRules,
-    this.flagUrl,
-    this.region,
-    this.subRegion,
-    this.isMobileOnly = false,
-    this.isLandlineOnly = false,
-    this.isTollFree = false,
+    this.pattern = "",
+    this.allowedCharacters = const [
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9'
+    ],
+    this.requiresAreaCode = false,
+    this.areaCodePattern,
+    this.exampleNumber,
   });
 
-  String get fullCountryCode => dialCode + regionCode;
+  /// Returns the full country code combining dial code and region code
+  String get fullCountryCode {
+    return dialCode + regionCode;
+  }
 
-  String get displayCC => regionCode.isNotEmpty ? "$dialCode $regionCode" : dialCode;
+  /// Returns the display format of the country code
+  String get displayCC {
+    if (regionCode.isNotEmpty) {
+      return "$dialCode $regionCode";
+    }
+    return dialCode;
+  }
 
-  String localizedName(String languageCode) => nameTranslations[languageCode] ?? name;
+  /// Validates a phone number against country-specific rules
+  bool isValidPhoneNumber(String number) {
+    if (number.isEmpty) return false;
 
-  Future<bool> isValidPhoneNumber(String phone) async {
-    try {
-      // Basic length validation
-      if (phone.length < minLength || phone.length > maxLength) {
-        return false;
-      }
+    // Remove all non-digit characters
+    final cleanedNumber = number.replaceAll(RegExp(r'[^\d]'), '');
 
-      // Prefix validation if specified
-      if (validPrefixes != null && validPrefixes!.isNotEmpty) {
-        final hasValidPrefix = validPrefixes!.any((prefix) => phone.startsWith(prefix));
-        if (!hasValidPrefix) return false;
-      }
-
-      // Suffix validation if specified
-      if (validSuffixes != null && validSuffixes!.isNotEmpty) {
-        final hasValidSuffix = validSuffixes!.any((suffix) => phone.endsWith(suffix));
-        if (!hasValidSuffix) return false;
-      }
-
-      // Use libphonenumber for advanced validation
-      final isValid = await PhoneNumberUtil.isValidPhoneNumber(
-        phoneNumber: phone,
-        isoCode: code,
-      );
-
-      if (!isValid) return false;
-
-      // Additional validation rules if specified
-      if (validationRules != null) {
-        // Implement custom validation rules here
-        // Example: Check for specific patterns, ranges, etc.
-      }
-
-      return true;
-    } catch (e) {
+    // Check length requirements
+    if (cleanedNumber.length < minLength || cleanedNumber.length > maxLength) {
       return false;
     }
+
+    // Check pattern if provided
+    if (pattern.isNotEmpty) {
+      final regex = RegExp(pattern);
+      if (!regex.hasMatch(cleanedNumber)) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
-  Future<String> formatPhoneNumber(String phone) async {
-    try {
-      final formatted = await PhoneNumberUtil.formatAsYouType(
-        phoneNumber: phone,
-        isoCode: code,
-      );
-      return formatted;
-    } catch (e) {
-      return phone;
+  /// Formats a phone number according to country-specific rules
+  String formatPhoneNumber(String number) {
+    if (number.isEmpty) return number;
+
+    // Remove all non-digit characters
+    final cleanedNumber = number.replaceAll(RegExp(r'[^\d]'), '');
+
+    // Format the number based on pattern
+    if (pattern.isNotEmpty) {
+      final regex = RegExp(pattern);
+      final match = regex.firstMatch(cleanedNumber);
+      if (match != null) {
+        return match.group(0) ?? cleanedNumber;
+      }
     }
+
+    // Default formatting
+    return cleanedNumber;
   }
 
-  Future<PhoneNumberType> getPhoneNumberType(String phone) async {
-    try {
-      final type = await PhoneNumberUtil.getNumberType(
-        phoneNumber: phone,
-        isoCode: code,
-      );
-      return type;
-    } catch (e) {
-      return PhoneNumberType.UNKNOWN;
-    }
+  /// Gets the localized name of the country
+  String getDisplayName(String locale) {
+    return nameTranslations[locale] ?? name;
+  }
+
+  /// Gets the localized name of the country (deprecated)
+  @Deprecated('Use getDisplayName instead')
+  String localizedName(String languageCode) {
+    return nameTranslations[languageCode] ?? name;
   }
 
   @override
-  List<Object?> get props => [
-        name,
-        flag,
-        code,
-        dialCode,
-        nameTranslations,
-        minLength,
-        maxLength,
-        regionCode,
-        validPrefixes,
-        validSuffixes,
-        validationRules,
-        flagUrl,
-        region,
-        subRegion,
-        isMobileOnly,
-        isLandlineOnly,
-        isTollFree,
-      ];
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
 
-  Country copyWith({
-    String? name,
-    Map<String, String>? nameTranslations,
-    String? flag,
-    String? code,
-    String? dialCode,
-    String? regionCode,
-    int? minLength,
-    int? maxLength,
-    List<String>? validPrefixes,
-    List<String>? validSuffixes,
-    Map<String, dynamic>? validationRules,
-    String? flagUrl,
-    String? region,
-    String? subRegion,
-    bool? isMobileOnly,
-    bool? isLandlineOnly,
-    bool? isTollFree,
-  }) {
-    return Country(
-      name: name ?? this.name,
-      nameTranslations: nameTranslations ?? this.nameTranslations,
-      flag: flag ?? this.flag,
-      code: code ?? this.code,
-      dialCode: dialCode ?? this.dialCode,
-      regionCode: regionCode ?? this.regionCode,
-      minLength: minLength ?? this.minLength,
-      maxLength: maxLength ?? this.maxLength,
-      validPrefixes: validPrefixes ?? this.validPrefixes,
-      validSuffixes: validSuffixes ?? this.validSuffixes,
-      validationRules: validationRules ?? this.validationRules,
-      flagUrl: flagUrl ?? this.flagUrl,
-      region: region ?? this.region,
-      subRegion: subRegion ?? this.subRegion,
-      isMobileOnly: isMobileOnly ?? this.isMobileOnly,
-      isLandlineOnly: isLandlineOnly ?? this.isLandlineOnly,
-      isTollFree: isTollFree ?? this.isTollFree,
-    );
+    return other is Country &&
+        other.name == name &&
+        other.flag == flag &&
+        other.code == code &&
+        other.dialCode == dialCode &&
+        other.regionCode == regionCode &&
+        other.minLength == minLength &&
+        other.maxLength == maxLength &&
+        other.pattern == pattern &&
+        other.allowedCharacters == allowedCharacters &&
+        other.requiresAreaCode == requiresAreaCode &&
+        other.areaCodePattern == areaCodePattern &&
+        other.exampleNumber == exampleNumber;
+  }
+
+  @override
+  int get hashCode {
+    return name.hashCode ^
+        flag.hashCode ^
+        code.hashCode ^
+        dialCode.hashCode ^
+        regionCode.hashCode ^
+        minLength.hashCode ^
+        maxLength.hashCode ^
+        pattern.hashCode ^
+        allowedCharacters.hashCode ^
+        requiresAreaCode.hashCode ^
+        areaCodePattern.hashCode ^
+        exampleNumber.hashCode;
   }
 }

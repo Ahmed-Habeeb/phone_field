@@ -1,8 +1,7 @@
-
 import '../models/country_model.dart';
 
- List<Country> countries = [
-  Country(
+List<Country> countries = [
+  const Country(
     name: "Afghanistan",
     nameTranslations: {
       "sk": "Afganistan",
@@ -33,7 +32,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Åland Islands",
     nameTranslations: {
       "sk": "Alandy",
@@ -64,7 +63,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Albania",
     nameTranslations: {
       "sk": "Albánsko",
@@ -95,7 +94,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Algeria",
     nameTranslations: {
       "sk": "Alžírsko",
@@ -126,7 +125,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "American Samoa",
     nameTranslations: {
       "sk": "Americká Samoa",
@@ -157,7 +156,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Andorra",
     nameTranslations: {
       "sk": "Andorra",
@@ -188,7 +187,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Angola",
     nameTranslations: {
       "sk": "Angola",
@@ -219,7 +218,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Anguilla",
     nameTranslations: {
       "sk": "Anguilla",
@@ -250,7 +249,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Antarctica",
     nameTranslations: {
       "sk": "Antarktída",
@@ -281,7 +280,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Antigua and Barbuda",
     nameTranslations: {
       "sk": "Antigua a Barbuda",
@@ -312,7 +311,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Argentina",
     nameTranslations: {
       "sk": "Argentína",
@@ -343,7 +342,7 @@ import '../models/country_model.dart';
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "Armenia",
     nameTranslations: {
       "sk": "Arménsko",
@@ -374,7 +373,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Aruba",
     nameTranslations: {
       "sk": "Aruba",
@@ -405,7 +404,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Australia",
     nameTranslations: {
       "sk": "Austrália",
@@ -436,7 +435,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Austria",
     nameTranslations: {
       "sk": "Rakúsko",
@@ -467,7 +466,7 @@ import '../models/country_model.dart';
     minLength: 13,
     maxLength: 13,
   ),
-  Country(
+  const Country(
     name: "Azerbaijan",
     nameTranslations: {
       "sk": "Azerbajdžan",
@@ -498,7 +497,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Bahamas",
     nameTranslations: {
       "sk": "Bahamy",
@@ -529,7 +528,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Bahrain",
     nameTranslations: {
       "sk": "Bahrajn",
@@ -560,7 +559,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Bangladesh",
     nameTranslations: {
       "sk": "Bangladéš",
@@ -591,7 +590,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Barbados",
     nameTranslations: {
       "sk": "Barbados",
@@ -622,7 +621,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Belarus",
     nameTranslations: {
       "sk": "Bielorusko",
@@ -653,7 +652,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Belgium",
     nameTranslations: {
       "sk": "Belgicko",
@@ -684,7 +683,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Belize",
     nameTranslations: {
       "sk": "Belize",
@@ -715,7 +714,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Benin",
     nameTranslations: {
       "sk": "Benin",
@@ -746,7 +745,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Bermuda",
     nameTranslations: {
       "sk": "Bermudy",
@@ -777,7 +776,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Bhutan",
     nameTranslations: {
       "sk": "Bhután",
@@ -808,7 +807,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Bolivia, Plurinational State of bolivia",
     nameTranslations: {
       "sk": "Bolívia",
@@ -839,7 +838,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Bosnia and Herzegovina",
     nameTranslations: {
       "sk": "Bosna a Hercegovina",
@@ -870,7 +869,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Botswana",
     nameTranslations: {
       "sk": "Botswana",
@@ -901,7 +900,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Bouvet Island",
     nameTranslations: {
       "sk": "Bouvetov ostrov",
@@ -932,7 +931,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Brazil",
     nameTranslations: {
       "sk": "Brazília",
@@ -963,7 +962,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "British Indian Ocean Territory",
     nameTranslations: {
       "sk": "Britské indickooceánske územie",
@@ -994,7 +993,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Brunei Darussalam",
     nameTranslations: {
       "sk": "Brunej",
@@ -1025,7 +1024,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Bulgaria",
     nameTranslations: {
       "sk": "Bulharsko",
@@ -1056,7 +1055,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Burkina Faso",
     nameTranslations: {
       "sk": "Burkina Faso",
@@ -1087,7 +1086,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Burundi",
     nameTranslations: {
       "sk": "Burundi",
@@ -1118,7 +1117,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Cambodia",
     nameTranslations: {
       "sk": "Kambodža",
@@ -1149,7 +1148,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Cameroon",
     nameTranslations: {
       "sk": "Kamerun",
@@ -1180,7 +1179,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Canada",
     nameTranslations: {
       "sk": "Kanada",
@@ -1211,7 +1210,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Cayman Islands",
     nameTranslations: {
       "sk": "Kajmanie ostrovy",
@@ -1242,7 +1241,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Central African Republic",
     nameTranslations: {
       "sk": "Stredoafrická republika",
@@ -1273,7 +1272,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Chad",
     nameTranslations: {
       "sk": "Čad",
@@ -1304,7 +1303,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Chile",
     nameTranslations: {
       "sk": "Čile",
@@ -1335,7 +1334,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "China",
     nameTranslations: {
       "sk": "Čína",
@@ -1366,7 +1365,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "Christmas Island",
     nameTranslations: {
       "sk": "Vianočný ostrov",
@@ -1397,7 +1396,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Cocos (Keeling) Islands",
     nameTranslations: {
       "sk": "Kokosové ostrovy",
@@ -1428,7 +1427,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Colombia",
     nameTranslations: {
       "sk": "Kolumbia",
@@ -1459,7 +1458,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Comoros",
     nameTranslations: {
       "sk": "Komory",
@@ -1490,7 +1489,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Congo",
     nameTranslations: {
       "sk": "Konžská republika",
@@ -1521,7 +1520,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Congo, The Democratic Republic of the Congo",
     nameTranslations: {
       "sk": "Konžská demokratická republika",
@@ -1552,7 +1551,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Cook Islands",
     nameTranslations: {
       "sk": "Cookove ostrovy",
@@ -1583,7 +1582,7 @@ import '../models/country_model.dart';
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  const Country(
     name: "Costa Rica",
     nameTranslations: {
       "sk": "Kostarika",
@@ -1614,7 +1613,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Côte d'Ivoire",
     nameTranslations: {
       "sk": "Pobrežie Slonoviny",
@@ -1645,7 +1644,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Croatia",
     nameTranslations: {
       "sk": "Chorvátsko",
@@ -1676,7 +1675,7 @@ import '../models/country_model.dart';
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "Cuba",
     nameTranslations: {
       "sk": "Kuba",
@@ -1707,7 +1706,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Cyprus",
     nameTranslations: {
       "sk": "Cyprus",
@@ -1738,7 +1737,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Czech Republic",
     nameTranslations: {
       "sk": "Česko",
@@ -1769,7 +1768,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Denmark",
     nameTranslations: {
       "sk": "Dánsko",
@@ -1800,7 +1799,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Djibouti",
     nameTranslations: {
       "sk": "Džibutsko",
@@ -1831,7 +1830,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Dominica",
     nameTranslations: {
       "sk": "Dominika",
@@ -1862,7 +1861,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Dominican Republic",
     nameTranslations: {
       "sk": "Dominikánska republika",
@@ -1893,7 +1892,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Ecuador",
     nameTranslations: {
       "sk": "Ekvádor",
@@ -1924,7 +1923,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Egypt",
     nameTranslations: {
       "sk": "Egypt",
@@ -1955,7 +1954,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "El Salvador",
     nameTranslations: {
       "sk": "Salvádor",
@@ -1986,7 +1985,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Equatorial Guinea",
     nameTranslations: {
       "sk": "Rovníková Guinea",
@@ -2017,7 +2016,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Eritrea",
     nameTranslations: {
       "sk": "Eritrea",
@@ -2048,7 +2047,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Estonia",
     nameTranslations: {
       "sk": "Estónsko",
@@ -2079,7 +2078,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Ethiopia",
     nameTranslations: {
       "sk": "Etiópia",
@@ -2110,7 +2109,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Falkland Islands (Malvinas)",
     nameTranslations: {
       "sk": "Falklandy",
@@ -2141,7 +2140,7 @@ import '../models/country_model.dart';
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  const Country(
     name: "Faroe Islands",
     nameTranslations: {
       "sk": "Faerské ostrovy",
@@ -2172,7 +2171,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Fiji",
     nameTranslations: {
       "sk": "Fidži",
@@ -2203,7 +2202,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Finland",
     nameTranslations: {
       "sk": "Fínsko",
@@ -2234,7 +2233,7 @@ import '../models/country_model.dart';
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "France",
     nameTranslations: {
       "sk": "Francúzsko",
@@ -2265,7 +2264,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "French Guiana",
     nameTranslations: {
       "sk": "Francúzska Guyana",
@@ -2296,7 +2295,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "French Polynesia",
     nameTranslations: {
       "sk": "Francúzska Polynézia",
@@ -2327,7 +2326,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "French Southern Territories",
     nameTranslations: {
       "sk": "Francúzske južné a antarktické územia",
@@ -2358,7 +2357,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Gabon",
     nameTranslations: {
       "sk": "Gabon",
@@ -2389,7 +2388,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Gambia",
     nameTranslations: {
       "sk": "Gambia",
@@ -2420,7 +2419,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Georgia",
     nameTranslations: {
       "sk": "Gruzínsko",
@@ -2451,7 +2450,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Germany",
     nameTranslations: {
       "sk": "Nemecko",
@@ -2482,7 +2481,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 13,
   ),
-  Country(
+  const Country(
     name: "Ghana",
     nameTranslations: {
       "sk": "Ghana",
@@ -2513,7 +2512,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Gibraltar",
     nameTranslations: {
       "sk": "Gibraltár",
@@ -2544,7 +2543,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Greece",
     nameTranslations: {
       "sk": "Grécko",
@@ -2575,7 +2574,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Greenland",
     nameTranslations: {
       "sk": "Grónsko",
@@ -2606,7 +2605,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Grenada",
     nameTranslations: {
       "sk": "Grenada",
@@ -2637,7 +2636,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Guadeloupe",
     nameTranslations: {
       "sk": "Guadeloupe",
@@ -2668,7 +2667,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Guam",
     nameTranslations: {
       "sk": "Guam",
@@ -2699,7 +2698,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Guatemala",
     nameTranslations: {
       "sk": "Guatemala",
@@ -2730,7 +2729,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Guernsey",
     nameTranslations: {
       "sk": "Guernsey",
@@ -2761,7 +2760,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Guinea",
     nameTranslations: {
       "sk": "Guinea",
@@ -2792,7 +2791,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Guinea-Bissau",
     nameTranslations: {
       "sk": "Guinea-Bissau",
@@ -2823,7 +2822,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Guyana",
     nameTranslations: {
       "sk": "Guyana",
@@ -2854,7 +2853,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Haiti",
     nameTranslations: {
       "sk": "Haiti",
@@ -2885,7 +2884,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Heard Island and Mcdonald Islands",
     nameTranslations: {
       "sk": "Heardov ostrov a Macdonaldove ostrovy",
@@ -2916,7 +2915,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Holy See (Vatican City State)",
     nameTranslations: {
       "sk": "Vatikán",
@@ -2947,7 +2946,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Honduras",
     nameTranslations: {
       "sk": "Honduras",
@@ -2978,7 +2977,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Hong Kong",
     nameTranslations: {
       "sk": "Hongkong – OAO Číny",
@@ -3009,7 +3008,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Hungary",
     nameTranslations: {
       "sk": "Maďarsko",
@@ -3040,7 +3039,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Iceland",
     nameTranslations: {
       "sk": "Island",
@@ -3071,7 +3070,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "India",
     nameTranslations: {
       "sk": "India",
@@ -3102,7 +3101,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Indonesia",
     nameTranslations: {
       "sk": "Indonézia",
@@ -3133,7 +3132,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 13,
   ),
-  Country(
+  const Country(
     name: "Iran, Islamic Republic of Persian Gulf",
     nameTranslations: {
       "sk": "Irán",
@@ -3164,7 +3163,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Iraq",
     nameTranslations: {
       "sk": "Irak",
@@ -3195,7 +3194,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Ireland",
     nameTranslations: {
       "sk": "Írsko",
@@ -3226,7 +3225,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Isle of Man",
     nameTranslations: {
       "sk": "Ostrov Man",
@@ -3257,7 +3256,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Israel",
     nameTranslations: {
       "sk": "Izrael",
@@ -3288,7 +3287,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Campione d'Italia",
     nameTranslations: {
       "sk": "Taliansko",
@@ -3319,7 +3318,7 @@ import '../models/country_model.dart';
     minLength: 13,
     maxLength: 13,
   ),
-  Country(
+  const Country(
     name: "Jamaica",
     nameTranslations: {
       "sk": "Jamajka",
@@ -3350,7 +3349,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Japan",
     nameTranslations: {
       "sk": "Japonsko",
@@ -3381,7 +3380,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Jersey",
     nameTranslations: {
       "sk": "Jersey",
@@ -3412,7 +3411,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Jordan",
     nameTranslations: {
       "sk": "Jordánsko",
@@ -3443,7 +3442,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Kazakhstan",
     nameTranslations: {
       "sk": "Kazachstan",
@@ -3474,7 +3473,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Kenya",
     nameTranslations: {
       "sk": "Keňa",
@@ -3505,7 +3504,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Kiribati",
     nameTranslations: {
       "sk": "Kiribati",
@@ -3536,7 +3535,7 @@ import '../models/country_model.dart';
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  const Country(
     name: "Korea, Democratic People's Republic of Korea",
     nameTranslations: {
       "sk": "Severná Kórea",
@@ -3567,7 +3566,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Korea, Republic of South Korea",
     nameTranslations: {
       "sk": "Južná Kórea",
@@ -3598,7 +3597,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Kuwait",
     nameTranslations: {
       "sk": "Kuvajt",
@@ -3629,7 +3628,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Kyrgyzstan",
     nameTranslations: {
       "sk": "Kirgizsko",
@@ -3660,7 +3659,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Laos",
     nameTranslations: {
       "sk": "Laos",
@@ -3691,7 +3690,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Latvia",
     nameTranslations: {
       "sk": "Lotyšsko",
@@ -3722,7 +3721,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Lebanon",
     nameTranslations: {
       "sk": "Libanon",
@@ -3753,7 +3752,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Lesotho",
     nameTranslations: {
       "sk": "Lesotho",
@@ -3784,7 +3783,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Liberia",
     nameTranslations: {
       "sk": "Libéria",
@@ -3815,7 +3814,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Libyan Arab Jamahiriya",
     nameTranslations: {
       "sk": "Líbya",
@@ -3846,7 +3845,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Liechtenstein",
     nameTranslations: {
       "sk": "Lichtenštajnsko",
@@ -3877,7 +3876,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Lithuania",
     nameTranslations: {
       "sk": "Litva",
@@ -3908,7 +3907,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Luxembourg",
     nameTranslations: {
       "sk": "Luxembursko",
@@ -3939,7 +3938,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Macao",
     nameTranslations: {
       "sk": "Macao – OAO Číny",
@@ -3970,7 +3969,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Macedonia",
     nameTranslations: {
       "sk": "Severné Macedónsko",
@@ -4001,7 +4000,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Madagascar",
     nameTranslations: {
       "sk": "Madagaskar",
@@ -4032,7 +4031,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Malawi",
     nameTranslations: {
       "sk": "Malawi",
@@ -4063,7 +4062,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Malaysia",
     nameTranslations: {
       "sk": "Malajzia",
@@ -4094,7 +4093,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Maldives",
     nameTranslations: {
       "sk": "Maldivy",
@@ -4125,7 +4124,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Mali",
     nameTranslations: {
       "sk": "Mali",
@@ -4156,7 +4155,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Malta",
     nameTranslations: {
       "sk": "Malta",
@@ -4187,7 +4186,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Marshall Islands",
     nameTranslations: {
       "sk": "Marshallove ostrovy",
@@ -4218,7 +4217,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Martinique",
     nameTranslations: {
       "sk": "Martinik",
@@ -4249,7 +4248,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Mauritania",
     nameTranslations: {
       "sk": "Mauritánia",
@@ -4280,7 +4279,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Mauritius",
     nameTranslations: {
       "sk": "Maurícius",
@@ -4311,7 +4310,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Mayotte",
     nameTranslations: {
       "sk": "Mayotte",
@@ -4342,7 +4341,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Mexico",
     nameTranslations: {
       "sk": "Mexiko",
@@ -4373,7 +4372,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Micronesia, Federated States of Micronesia",
     nameTranslations: {
       "sk": "Mikronézia",
@@ -4404,7 +4403,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Moldova",
     nameTranslations: {
       "sk": "Moldavsko",
@@ -4435,7 +4434,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Monaco",
     nameTranslations: {
       "sk": "Monako",
@@ -4466,7 +4465,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Mongolia",
     nameTranslations: {
       "sk": "Mongolsko",
@@ -4497,7 +4496,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Montenegro",
     nameTranslations: {
       "sk": "Čierna Hora",
@@ -4528,7 +4527,7 @@ import '../models/country_model.dart';
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "Montserrat",
     nameTranslations: {
       "sk": "Montserrat",
@@ -4559,7 +4558,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Morocco",
     nameTranslations: {
       "sk": "Maroko",
@@ -4590,7 +4589,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Mozambique",
     nameTranslations: {
       "sk": "Mozambik",
@@ -4621,7 +4620,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Myanmar",
     nameTranslations: {
       "sk": "Mjanmarsko",
@@ -4652,7 +4651,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Namibia",
     nameTranslations: {
       "sk": "Namíbia",
@@ -4683,7 +4682,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Nauru",
     nameTranslations: {
       "sk": "Nauru",
@@ -4714,7 +4713,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Nepal",
     nameTranslations: {
       "sk": "Nepál",
@@ -4745,7 +4744,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Netherlands",
     nameTranslations: {
       "sk": "Holandsko",
@@ -4776,7 +4775,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "New Caledonia",
     nameTranslations: {
       "sk": "Nová Kaledónia",
@@ -4807,7 +4806,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "New Zealand",
     nameTranslations: {
       "sk": "Nový Zéland",
@@ -4838,7 +4837,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Nicaragua",
     nameTranslations: {
       "sk": "Nikaragua",
@@ -4869,7 +4868,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Niger",
     nameTranslations: {
       "sk": "Niger",
@@ -4900,7 +4899,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Nigeria",
     nameTranslations: {
       "sk": "Nigéria",
@@ -4931,7 +4930,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Niue",
     nameTranslations: {
       "sk": "Niue",
@@ -4962,7 +4961,7 @@ import '../models/country_model.dart';
     minLength: 4,
     maxLength: 4,
   ),
-  Country(
+  const Country(
     name: "Norfolk Island",
     nameTranslations: {
       "sk": "Norfolk",
@@ -4993,7 +4992,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Northern Mariana Islands",
     nameTranslations: {
       "sk": "Severné Mariány",
@@ -5024,7 +5023,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Norway",
     nameTranslations: {
       "sk": "Nórsko",
@@ -5055,7 +5054,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Oman",
     nameTranslations: {
       "sk": "Omán",
@@ -5086,7 +5085,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Pakistan",
     nameTranslations: {
       "sk": "Pakistan",
@@ -5117,7 +5116,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Palau",
     nameTranslations: {
       "sk": "Palau",
@@ -5148,7 +5147,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Palestinian Territory, Occupied",
     nameTranslations: {
       "sk": "Palestínske územia",
@@ -5179,7 +5178,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Panama",
     nameTranslations: {
       "sk": "Panama",
@@ -5210,7 +5209,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Papua New Guinea",
     nameTranslations: {
       "sk": "Papua-Nová Guinea",
@@ -5241,7 +5240,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Paraguay",
     nameTranslations: {
       "sk": "Paraguaj",
@@ -5272,7 +5271,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Peru",
     nameTranslations: {
       "sk": "Peru",
@@ -5303,7 +5302,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Philippines",
     nameTranslations: {
       "sk": "Filipíny",
@@ -5334,7 +5333,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Pitcairn",
     nameTranslations: {
       "sk": "Pitcairnove ostrovy",
@@ -5365,7 +5364,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Poland",
     nameTranslations: {
       "sk": "Poľsko",
@@ -5396,7 +5395,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Portugal",
     nameTranslations: {
       "sk": "Portugalsko",
@@ -5427,7 +5426,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Puerto Rico",
     nameTranslations: {
       "sk": "Portoriko",
@@ -5458,7 +5457,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Qatar",
     nameTranslations: {
       "sk": "Katar",
@@ -5489,7 +5488,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Romania",
     nameTranslations: {
       "sk": "Rumunsko",
@@ -5520,7 +5519,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Russia",
     nameTranslations: {
       "sk": "Rusko",
@@ -5551,7 +5550,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Rwanda",
     nameTranslations: {
       "sk": "Rwanda",
@@ -5582,7 +5581,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Reunion",
     nameTranslations: {
       "sk": "Réunion",
@@ -5613,7 +5612,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Saint Barthelemy",
     nameTranslations: {
       "sk": "Svätý Bartolomej",
@@ -5644,7 +5643,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Saint Helena, Ascension and Tristan Da Cunha",
     nameTranslations: {
       "sk": "Svätá Helena",
@@ -5675,7 +5674,7 @@ import '../models/country_model.dart';
     minLength: 4,
     maxLength: 4,
   ),
-  Country(
+  const Country(
     name: "Saint Kitts and Nevis",
     nameTranslations: {
       "sk": "Svätý Krištof a Nevis",
@@ -5706,7 +5705,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Saint Lucia",
     nameTranslations: {
       "sk": "Svätá Lucia",
@@ -5737,7 +5736,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Saint Martin",
     nameTranslations: {
       "sk": "Svätý Martin (fr.)",
@@ -5768,7 +5767,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Saint Pierre and Miquelon",
     nameTranslations: {
       "sk": "Saint Pierre a Miquelon",
@@ -5799,7 +5798,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Saint Vincent and the Grenadines",
     nameTranslations: {
       "sk": "Svätý Vincent a Grenadíny",
@@ -5830,7 +5829,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Samoa",
     nameTranslations: {
       "sk": "Samoa",
@@ -5861,7 +5860,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "San Marino",
     nameTranslations: {
       "sk": "San Maríno",
@@ -5892,7 +5891,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Sao Tome and Principe",
     nameTranslations: {
       "sk": "Svätý Tomáš a Princov ostrov",
@@ -5923,7 +5922,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Saudi Arabia",
     nameTranslations: {
       "sk": "Saudská Arábia",
@@ -5954,7 +5953,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Senegal",
     nameTranslations: {
       "sk": "Senegal",
@@ -5985,7 +5984,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Serbia",
     nameTranslations: {
       "sk": "Srbsko",
@@ -6016,7 +6015,7 @@ import '../models/country_model.dart';
     minLength: 12,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "Seychelles",
     nameTranslations: {
       "sk": "Seychely",
@@ -6047,7 +6046,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Sierra Leone",
     nameTranslations: {
       "sk": "Sierra Leone",
@@ -6078,7 +6077,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Singapore",
     nameTranslations: {
       "sk": "Singapur",
@@ -6109,7 +6108,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Slovakia",
     nameTranslations: {
       "sk": "Slovensko",
@@ -6140,7 +6139,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Slovenia",
     nameTranslations: {
       "sk": "Slovinsko",
@@ -6171,7 +6170,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Solomon Islands",
     nameTranslations: {
       "sk": "Šalamúnove ostrovy",
@@ -6202,7 +6201,7 @@ import '../models/country_model.dart';
     minLength: 5,
     maxLength: 5,
   ),
-  Country(
+  const Country(
     name: "Somalia",
     nameTranslations: {
       "sk": "Somálsko",
@@ -6233,7 +6232,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "South Africa",
     nameTranslations: {
       "sk": "Južná Afrika",
@@ -6264,7 +6263,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "South Sudan",
     nameTranslations: {
       "sk": "Južný Sudán",
@@ -6295,7 +6294,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "South Georgia and the South Sandwich Islands",
     nameTranslations: {
       "sk": "Južná Georgia a Južné Sandwichove ostrovy",
@@ -6326,7 +6325,7 @@ import '../models/country_model.dart';
     minLength: 15,
     maxLength: 15,
   ),
-  Country(
+  const Country(
     name: "Spain",
     nameTranslations: {
       "sk": "Španielsko",
@@ -6357,7 +6356,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Sri Lanka",
     nameTranslations: {
       "sk": "Srí Lanka",
@@ -6388,7 +6387,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Sudan",
     nameTranslations: {
       "sk": "Sudán",
@@ -6419,7 +6418,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Suriname",
     nameTranslations: {
       "sk": "Surinam",
@@ -6450,7 +6449,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Svalbard and Jan Mayen",
     nameTranslations: {
       "sk": "Svalbard a Jan Mayen",
@@ -6481,7 +6480,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Eswatini",
     nameTranslations: {
       "sk": "Eswatini",
@@ -6512,7 +6511,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Sweden",
     nameTranslations: {
       "sk": "Švédsko",
@@ -6543,7 +6542,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 13,
   ),
-  Country(
+  const Country(
     name: "Switzerland",
     nameTranslations: {
       "sk": "Švajčiarsko",
@@ -6574,7 +6573,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 12,
   ),
-  Country(
+  const Country(
     name: "Syrian Arab Republic",
     nameTranslations: {
       "sk": "Sýria",
@@ -6605,7 +6604,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Taiwan",
     nameTranslations: {
       "sk": "Taiwan",
@@ -6636,7 +6635,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Tajikistan",
     nameTranslations: {
       "sk": "Tadžikistan",
@@ -6667,7 +6666,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Tanzania, United Republic of Tanzania",
     nameTranslations: {
       "sk": "Tanzánia",
@@ -6698,7 +6697,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Thailand",
     nameTranslations: {
       "sk": "Thajsko",
@@ -6729,7 +6728,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Timor-Leste",
     nameTranslations: {
       "sk": "Východný Timor",
@@ -6760,7 +6759,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Togo",
     nameTranslations: {
       "sk": "Togo",
@@ -6791,7 +6790,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Tokelau",
     nameTranslations: {
       "sk": "Tokelau",
@@ -6822,7 +6821,7 @@ import '../models/country_model.dart';
     minLength: 4,
     maxLength: 4,
   ),
-  Country(
+  const Country(
     name: "Tonga",
     nameTranslations: {
       "sk": "Tonga",
@@ -6853,7 +6852,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Trinidad and Tobago",
     nameTranslations: {
       "sk": "Trinidad a Tobago",
@@ -6884,7 +6883,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Tunisia",
     nameTranslations: {
       "sk": "Tunisko",
@@ -6915,7 +6914,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Turkey",
     nameTranslations: {
       "sk": "Turecko",
@@ -6946,7 +6945,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Turkmenistan",
     nameTranslations: {
       "sk": "Turkménsko",
@@ -6977,7 +6976,7 @@ import '../models/country_model.dart';
     minLength: 8,
     maxLength: 8,
   ),
-  Country(
+  const Country(
     name: "Turks and Caicos Islands",
     nameTranslations: {
       "sk": "Turks a Caicos",
@@ -7008,7 +7007,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Tuvalu",
     nameTranslations: {
       "sk": "Tuvalu",
@@ -7039,7 +7038,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Uganda",
     nameTranslations: {
       "sk": "Uganda",
@@ -7070,7 +7069,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Ukraine",
     nameTranslations: {
       "sk": "Ukrajina",
@@ -7101,7 +7100,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "United Arab Emirates",
     nameTranslations: {
       "sk": "Spojené arabské emiráty",
@@ -7132,7 +7131,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "United Kingdom",
     nameTranslations: {
       "sk": "Spojené kráľovstvo",
@@ -7163,7 +7162,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "United States",
     nameTranslations: {
       "sk": "Spojené štáty",
@@ -7194,7 +7193,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Uruguay",
     nameTranslations: {
       "sk": "Uruguaj",
@@ -7225,7 +7224,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Uzbekistan",
     nameTranslations: {
       "sk": "Uzbekistan",
@@ -7256,7 +7255,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Vanuatu",
     nameTranslations: {
       "sk": "Vanuatu",
@@ -7287,7 +7286,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Venezuela, Bolivarian Republic of Venezuela",
     nameTranslations: {
       "sk": "Venezuela",
@@ -7318,7 +7317,7 @@ import '../models/country_model.dart';
     minLength: 10,
     maxLength: 10,
   ),
-  Country(
+  const Country(
     name: "Vietnam",
     nameTranslations: {
       "sk": "Vietnam",
@@ -7349,7 +7348,7 @@ import '../models/country_model.dart';
     minLength: 11,
     maxLength: 11,
   ),
-  Country(
+  const Country(
     name: "Virgin Islands, British",
     nameTranslations: {
       "sk": "Britské Panenské ostrovy",
@@ -7380,7 +7379,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Virgin Islands, U.S.",
     nameTranslations: {
       "sk": "Americké Panenské ostrovy",
@@ -7411,7 +7410,7 @@ import '../models/country_model.dart';
     minLength: 7,
     maxLength: 7,
   ),
-  Country(
+  const Country(
     name: "Wallis and Futuna",
     nameTranslations: {
       "sk": "Wallis a Futuna",
@@ -7442,7 +7441,7 @@ import '../models/country_model.dart';
     minLength: 6,
     maxLength: 6,
   ),
-  Country(
+  const Country(
     name: "Yemen",
     nameTranslations: {
       "sk": "Jemen",
@@ -7473,7 +7472,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
     name: "Zambia",
     nameTranslations: {
       "sk": "Zambia",
@@ -7504,7 +7503,7 @@ import '../models/country_model.dart';
     minLength: 9,
     maxLength: 9,
   ),
-  Country(
+  const Country(
       name: "Zimbabwe",
       nameTranslations: {
         "sk": "Zimbabwe",
@@ -7535,4 +7534,3 @@ import '../models/country_model.dart';
       minLength: 9,
       maxLength: 9)
 ];
-

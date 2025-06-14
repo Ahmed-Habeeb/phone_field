@@ -11,24 +11,21 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-# Smart Phone Field
+# Custom Phone Field
 
-A smart and customizable Flutter package for phone number input with country selection, validation, and formatting.
+A beautiful and customizable phone number input field for Flutter applications. This package provides a ready-to-use phone input field with country selection, validation, and customization options.
 
-[![pub package](https://img.shields.io/pub/v/smart_phone_field.svg)](https://pub.dev/packages/smart_phone_field)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Custom Phone Field](https://raw.githubusercontent.com/yourusername/custom_phone_field/main/screenshots/phone_field.png)
 
 ## Features
 
-- 📱 Smart phone number input with country selection
-- 🌍 200+ countries with flags and dial codes
-- ✅ Real-time validation and formatting
+- 🌍 Country selection with flags and dial codes
+- 📱 Phone number validation
 - 🎨 Highly customizable UI
-- 🔍 Search functionality for countries
-- ⭐ Favorite and recent countries
-- 📦 Persistent storage for user preferences
+- 🔄 Form integration
 - 🌐 Internationalization support
-- 📝 E.164 format support
+- ♿ Accessibility support
+- 📦 Lightweight and easy to use
 
 ## Installation
 
@@ -36,237 +33,165 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  smart_phone_field: ^1.0.0
+  custom_phone_field: ^1.0.0
 ```
 
-## Usage
-
-The package provides two ways to implement phone input:
-
-1. **PhoneInputField**: A pre-built widget with a complete UI
-2. **PhoneInputBuilder**: A flexible builder for custom UI implementation
-
-### Using PhoneInputField (Pre-built UI)
+## Quick Start
 
 ```dart
-import 'package:smart_phone_field/smart_phone_field.dart';
+import 'package:custom_phone_field/custom_phone_field.dart';
 
 // Basic usage
-PhoneInputField(
-  controller: PhoneController(),
-  onChanged: (number) {
-    print('Phone number: $number');
+CustomPhoneInput(
+  onPhoneNumberChanged: (phoneNumber) {
+    print('Phone number: $phoneNumber');
   },
 )
 
-// Advanced usage with all features
-PhoneInputField(
-  controller: PhoneController(),
-  // UI Customization
-  showCountryFlag: true,
-  showCountryCode: true,
-  showValidationMessage: true,
-  
-  // Features
-  enableFavoriteCountries: true,
-  enableRecentCountries: true,
-  enableE164Format: true,
-  
-  // Callbacks
-  onChanged: (number) {
-    print('Phone number: $number');
-  },
+// With validation
+CustomPhoneInput(
+  initialCountry: 'US',
   onCountryChanged: (country) {
     print('Selected country: ${country.name}');
   },
-  onValidated: (isValid) {
-    print('Is valid: $isValid');
+  onPhoneNumberChanged: (phoneNumber) {
+    print('Phone number: $phoneNumber');
+  },
+  validator: (value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter a phone number';
+    }
+    return null;
   },
 )
 ```
 
-### Using PhoneInputBuilder (Custom UI)
+## Available Widgets
 
-The `PhoneInputBuilder` gives you complete control over the UI while handling all the phone input logic:
+### 1. CustomPhoneInput
 
-```dart
-PhoneInputBuilder(
-  controller: PhoneController(),
-  onChanged: (number) {
-    print('Phone number: $number');
-  },
-  builder: (context, phoneNumber, country, isValid, errorMessage, {
-    required onNumberChanged,
-    required onCountrySelected,
-    required onCountryPickerPressed,
-  }) {
-    // Build your custom UI here
-    return Row(
-      children: [
-        // Custom country selector
-        GestureDetector(
-          onTap: onCountryPickerPressed,
-          child: Container(
-            padding: EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Row(
-              children: [
-                if (country != null) ...[
-                  Text(country.name),
-                  SizedBox(width: 8),
-                  Text('+${country.dialCode}'),
-                ] else
-                  Text('Select Country'),
-                Icon(Icons.arrow_drop_down),
-              ],
-            ),
-          ),
-        ),
-        SizedBox(width: 8),
-        // Custom phone input
-        Expanded(
-          child: TextField(
-            onChanged: onNumberChanged,
-            decoration: InputDecoration(
-              labelText: 'Phone Number',
-              errorText: errorMessage,
-              border: OutlineInputBorder(),
-            ),
-          ),
-        ),
-      ],
-    );
-  },
-)
-```
-
-### Form Integration
+A pre-built, ready-to-use phone input field with common customizations.
 
 ```dart
-class ContactForm extends StatefulWidget {
-  @override
-  _ContactFormState createState() => _ContactFormState();
-}
-
-class _ContactFormState extends State<ContactForm> {
-  final _formKey = GlobalKey<FormState>();
-  final _phoneController = PhoneController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: [
-          // Using pre-built widget
-          PhoneInputField(
-            controller: _phoneController,
-            decoration: InputDecoration(
-              labelText: 'Phone Number',
-              border: OutlineInputBorder(),
-            ),
-            validator: (phoneNumber) {
-              if (phoneNumber == null || !phoneNumber.isValid) {
-                return 'Please enter a valid phone number';
-              }
-              return null;
-            },
-          ),
-          // Or using builder for custom UI
-          PhoneInputBuilder(
-            controller: _phoneController,
-            builder: (context, phoneNumber, country, isValid, errorMessage, {
-              required onNumberChanged,
-              required onCountrySelected,
-              required onCountryPickerPressed,
-            }) {
-              // Your custom form field implementation
-              return YourCustomFormField(
-                value: phoneNumber?.number,
-                error: errorMessage,
-                onChanged: onNumberChanged,
-              );
-            },
-          ),
-          SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                // Process the form
-                print('Phone: ${_phoneController.phoneNumber}');
-              }
-            },
-            child: Text('Submit'),
-          ),
-        ],
-      ),
-    );
-  }
-}
+CustomPhoneInput({
+  Key? key,
+  String initialCountry = 'EG',
+  String languageCode = 'en',
+  List<String> availableCountries = const [],
+  void Function(Country country)? onCountryChanged,
+  void Function(String phoneNumber)? onPhoneNumberChanged,
+  String? initialValue,
+  bool enabled = true,
+  bool readOnly = false,
+  InputDecoration? decoration,
+  TextStyle? style,
+  String? Function(String?)? validator,
+})
 ```
-
-## API Reference
-
-### PhoneInputField
-
-The pre-built phone input field widget.
 
 #### Properties
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `controller` | `PhoneController` | Controller for the phone field |
-| `decoration` | `InputDecoration` | Decoration for the input field |
-| `style` | `TextStyle` | Style for the input text |
+| `initialCountry` | `String` | Initial country code (default: 'EG') |
+| `languageCode` | `String` | Language code for localization (default: 'en') |
+| `availableCountries` | `List<String>` | List of available country codes |
+| `onCountryChanged` | `Function(Country)` | Callback when country is changed |
+| `onPhoneNumberChanged` | `Function(String)` | Callback when phone number is changed |
+| `initialValue` | `String?` | Initial phone number value |
 | `enabled` | `bool` | Whether the field is enabled |
-| `autofocus` | `bool` | Whether to focus the field automatically |
-| `showCountryFlag` | `bool` | Whether to show country flag |
-| `showCountryCode` | `bool` | Whether to show country code |
-| `showValidationMessage` | `bool` | Whether to show validation message |
-| `enableFavoriteCountries` | `bool` | Whether to enable favorite countries |
-| `enableRecentCountries` | `bool` | Whether to enable recent countries |
-| `enableE164Format` | `bool` | Whether to use E.164 format |
-| `onChanged` | `Function(PhoneNumber)` | Callback when phone number changes |
-| `onCountryChanged` | `Function(Country)` | Callback when country changes |
-| `onValidated` | `Function(bool)` | Callback when validation status changes |
-| `validator` | `String? Function(PhoneNumber?)` | Custom validation function |
+| `readOnly` | `bool` | Whether the field is read-only |
+| `decoration` | `InputDecoration?` | Custom input decoration |
+| `style` | `TextStyle?` | Custom text style |
+| `validator` | `Function(String?)?` | Form validation callback |
 
-### PhoneInputBuilder
+### 2. PhoneField
 
-A flexible builder for custom phone input UI.
+A more customizable phone field widget that allows complete control over the UI.
 
-#### Properties
+```dart
+PhoneField({
+  Key? key,
+  required Widget Function(
+    BuildContext context,
+    Country country,
+    VoidCallback openPicker,
+    TextEditingController controller,
+    FocusNode focusNode,
+    bool isValid,
+    String? errorText,
+  ) builder,
+  String initialCountry = 'EG',
+  String languageCode = 'en',
+  List<String> availableCountries = const [],
+})
+```
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `controller` | `PhoneController` | Controller for the phone field |
-| `builder` | `Widget Function(...)` | Builder function for custom UI |
-| `onChanged` | `Function(PhoneNumber)` | Callback when phone number changes |
-| `onCountryChanged` | `Function(Country)` | Callback when country changes |
-| `onValidated` | `Function(bool)` | Callback when validation status changes |
-| `validator` | `String? Function(PhoneNumber?)` | Custom validation function |
+## Examples
 
-### PhoneController
+### Basic Usage
 
-Controller for managing phone field state.
+```dart
+CustomPhoneInput(
+  onPhoneNumberChanged: (phoneNumber) {
+    print('Phone number: $phoneNumber');
+  },
+)
+```
 
-#### Methods
+### With Form Integration
 
-| Method | Description |
-|--------|-------------|
-| `getNumber()` | Get the current phone number |
-| `getCountry()` | Get the selected country |
-| `setNumber(String)` | Set the phone number |
-| `setCountry(Country)` | Set the country |
-| `clear()` | Clear the phone number |
-| `isValid()` | Check if the phone number is valid |
+```dart
+final _formKey = GlobalKey<FormState>();
+
+Form(
+  key: _formKey,
+  child: CustomPhoneInput(
+    validator: (value) {
+      if (value == null || value.isEmpty) {
+        return 'Please enter a phone number';
+      }
+      return null;
+    },
+  ),
+)
+```
+
+### Custom Styling
+
+```dart
+CustomPhoneInput(
+  initialCountry: 'US',
+  style: TextStyle(
+    fontSize: 16,
+    color: Colors.black87,
+  ),
+  decoration: InputDecoration(
+    labelText: 'Phone Number',
+    hintText: 'Enter your phone number',
+    prefixIcon: Icon(Icons.phone),
+  ),
+)
+```
+
+### Restricted Countries
+
+```dart
+CustomPhoneInput(
+  availableCountries: ['US', 'CA', 'GB', 'AU'],
+  initialCountry: 'US',
+)
+```
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
@@ -274,6 +199,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- [libphonenumber](https://github.com/google/libphonenumber) for phone number validation
-- [country_picker](https://pub.dev/packages/country_picker) for country data
-- All contributors and users of this package
+- Country flags from [flag-icons](https://github.com/lipis/flag-icons)
+- Phone number validation patterns from [libphonenumber](https://github.com/google/libphonenumber)
+
+## Support
+
+If you find this package helpful, please give it a star on GitHub and share it with others!
+
+For issues and feature requests, please use the [GitHub issue tracker](https://github.com/yourusername/custom_phone_field/issues).

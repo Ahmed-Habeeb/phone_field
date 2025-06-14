@@ -1,7 +1,7 @@
-name: smart_phone_field
+name: custom_phone_field
 description: A smart and customizable Flutter package for phone number input with country selection, validation, and formatting.
 version: 1.0.0
-homepage: https://github.com/yourusername/phone_field
+homepage: https://github.com/Ahmed-Habeeb/phone_field
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -26,7 +26,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/flags/
-    - assets/translations/
+
   # To add assets to your package, add an assets section, like this:
   #   - assets/flags/
   #   - images/a_dot_ham.jpeg
