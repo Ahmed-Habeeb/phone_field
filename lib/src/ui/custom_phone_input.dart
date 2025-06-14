@@ -35,6 +35,8 @@ class CustomPhoneInput extends StatefulWidget {
   /// The validator callback for the input field
   final String? Function(String?)? validator;
 
+  final TextEditingController? controller;
+
   const CustomPhoneInput({
     super.key,
     this.initialCountry = 'EG',
@@ -48,6 +50,7 @@ class CustomPhoneInput extends StatefulWidget {
     this.decoration,
     this.style,
     this.validator,
+    this.controller,
   });
 
   @override
@@ -62,7 +65,11 @@ class _CustomPhoneInputState extends State<CustomPhoneInput> {
   @override
   void initState() {
     super.initState();
-    controller = TextEditingController(text: widget.initialValue);
+    controller = widget.controller??TextEditingController();
+    // Set initial value if provided
+    if (widget.initialValue != null) {
+      controller.text = widget.initialValue!;
+    }
     focusNode = FocusNode();
 
     // Listen to focus changes to update border color

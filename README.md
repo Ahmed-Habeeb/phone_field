@@ -34,7 +34,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  custom_phone_field: ^1.0.1
+  custom_phone_field: ^1.0.2
 ```
 
 ## Quick Start
@@ -122,6 +122,7 @@ CustomPhoneInput({
   InputDecoration? decoration,
   TextStyle? style,
   String? Function(String?)? validator,
+  TextEditingController? controller,
 })
 ```
 
@@ -140,6 +141,7 @@ CustomPhoneInput({
 | `decoration` | `InputDecoration?` | Custom input decoration |
 | `style` | `TextStyle?` | Custom text style |
 | `validator` | `Function(String?)?` | Form validation callback |
+| `controller` | `TextEditingController?` | Controller for programmatic control of the input field |
 
 ### 2. PhoneField
 
@@ -296,6 +298,55 @@ PhoneField(
     );
   },
 )
+```
+
+### Using with Controller
+
+```dart
+class _MyFormState extends State<MyForm> {
+  final _phoneController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    // Set initial value
+    _phoneController.text = '+1234567890';
+  }
+
+  @override
+  void dispose() {
+    _phoneController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomPhoneInput(
+      controller: _phoneController,
+      onPhoneNumberChanged: (phoneNumber) {
+        print('Phone number: $phoneNumber');
+      },
+    );
+  }
+}
+```
+
+### Programmatic Control
+
+```dart
+// Clear the input
+_phoneController.clear();
+
+// Set a new value
+_phoneController.text = '+1987654321';
+
+// Get the current value
+String currentPhone = _phoneController.text;
+
+// Listen to changes
+_phoneController.addListener(() {
+  print('Phone number changed: ${_phoneController.text}');
+});
 ```
 
 ## Contributing
