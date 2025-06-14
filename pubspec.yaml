@@ -1,6 +1,6 @@
 name: custom_phone_field
 description: A smart and customizable Flutter package for phone number input with country selection, validation, and formatting.
-version: 1.0.2
+version: 1.0.3
 homepage: https://github.com/Ahmed-Habeeb/phone_field
 
 environment:
@@ -10,8 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^2.2.0
-  intl: ^0.18.0
+
 
 dev_dependencies:
   flutter_test:

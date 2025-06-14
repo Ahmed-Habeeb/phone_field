@@ -34,7 +34,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  custom_phone_field: ^1.0.2
+  custom_phone_field: ^1.0.3
 ```
 
 ## Quick Start
