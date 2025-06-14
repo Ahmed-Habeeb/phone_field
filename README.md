@@ -13,17 +13,18 @@ and the Flutter guide for
 
 # Custom Phone Field
 
-A beautiful and customizable phone number input field for Flutter applications. This package provides a ready-to-use phone input field with country selection, validation, and customization options.
+[![pub package](https://img.shields.io/pub/v/custom_phone_field.svg)](https://pub.dev/packages/custom_phone_field)
+[![license](https://img.shields.io/github/license/habeeb/custom_phone_field.svg)](https://github.com/habeeb/custom_phone_field/blob/main/LICENSE)
 
-![Custom Phone Field](https://raw.githubusercontent.com/yourusername/custom_phone_field/main/screenshots/phone_field.png)
+A beautiful and customizable phone number input field for Flutter applications. This package provides a ready-to-use phone input field with country selection, validation, and customization options.
 
 ## Features
 
 - 🌍 Country selection with flags and dial codes
-- 📱 Phone number validation
-- 🎨 Highly customizable UI
-- 🔄 Form integration
-- 🌐 Internationalization support
+- 📱 Phone number validation with country-specific rules
+- 🎨 Two widget options: `CustomPhoneInput` (pre-built) and `PhoneField` (customizable)
+- 🔄 Form integration with validation
+- 🌐 Internationalization support (20+ languages)
 - ♿ Accessibility support
 - 📦 Lightweight and easy to use
 
@@ -33,22 +34,16 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  custom_phone_field: ^1.0.0
+  custom_phone_field: ^1.0.1
 ```
 
 ## Quick Start
 
+### Using CustomPhoneInput (Pre-built Widget)
+
 ```dart
 import 'package:custom_phone_field/custom_phone_field.dart';
 
-// Basic usage
-CustomPhoneInput(
-  onPhoneNumberChanged: (phoneNumber) {
-    print('Phone number: $phoneNumber');
-  },
-)
-
-// With validation
 CustomPhoneInput(
   initialCountry: 'US',
   onCountryChanged: (country) {
@@ -62,6 +57,47 @@ CustomPhoneInput(
       return 'Please enter a phone number';
     }
     return null;
+  },
+)
+```
+
+### Using PhoneField (Customizable Widget)
+
+```dart
+import 'package:custom_phone_field/custom_phone_field.dart';
+
+PhoneField(
+  initialCountry: 'US',
+  onCountryChanged: (country) {
+    print('Selected country: ${country.name}');
+  },
+  builder: (context, country, openPicker) {
+    return Row(
+      children: [
+        // Country selector
+        GestureDetector(
+          onTap: openPicker,
+          child: Container(
+            padding: EdgeInsets.all(8),
+            child: Row(
+              children: [
+                Text('+${country.dialCode}'),
+                Icon(Icons.arrow_drop_down),
+              ],
+            ),
+          ),
+        ),
+        // Phone input
+        Expanded(
+          child: TextField(
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+              hintText: 'Enter phone number',
+            ),
+          ),
+        ),
+      ],
+    );
   },
 )
 ```
@@ -107,7 +143,7 @@ CustomPhoneInput({
 
 ### 2. PhoneField
 
-A more customizable phone field widget that allows complete control over the UI.
+A customizable phone field widget that allows complete control over the UI.
 
 ```dart
 PhoneField({
@@ -116,20 +152,52 @@ PhoneField({
     BuildContext context,
     Country country,
     VoidCallback openPicker,
-    TextEditingController controller,
-    FocusNode focusNode,
-    bool isValid,
-    String? errorText,
   ) builder,
   String initialCountry = 'EG',
   String languageCode = 'en',
   List<String> availableCountries = const [],
+  void Function(Country country)? onCountryChanged,
 })
+```
+
+The `PhoneField` widget provides a base implementation that you can customize using the builder pattern. The builder function receives:
+
+- `context`: The current BuildContext
+- `country`: The currently selected Country object with properties:
+  - `name`: Country name
+  - `code`: ISO country code (e.g., 'US')
+  - `dialCode`: Country dial code (e.g., '+1')
+  - `flag`: Country flag emoji
+  - `minLength`: Minimum phone number length
+  - `maxLength`: Maximum phone number length
+  - `nameTranslations`: Map of country names in different languages
+- `openPicker`: A callback function to open the country picker dialog
+
+## Country Model
+
+The `Country` model provides detailed information about each country:
+
+```dart
+class Country {
+  final String name;
+  final Map<String, String> nameTranslations;
+  final String flag;
+  final String code;
+  final String dialCode;
+  final String regionCode;
+  final int minLength;
+  final int maxLength;
+  final String pattern;
+  final List<String> allowedCharacters;
+  final bool requiresAreaCode;
+  final String? areaCodePattern;
+  final String? exampleNumber;
+}
 ```
 
 ## Examples
 
-### Basic Usage
+### Basic Usage with CustomPhoneInput
 
 ```dart
 CustomPhoneInput(
@@ -139,7 +207,7 @@ CustomPhoneInput(
 )
 ```
 
-### With Form Integration
+### Form Integration
 
 ```dart
 final _formKey = GlobalKey<FormState>();
@@ -183,6 +251,53 @@ CustomPhoneInput(
 )
 ```
 
+### Custom Implementation with PhoneField
+
+```dart
+PhoneField(
+  initialCountry: 'US',
+  onCountryChanged: (country) {
+    print('Selected country: ${country.name}');
+  },
+  builder: (context, country, openPicker) {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Row(
+        children: [
+          // Country flag and code
+          GestureDetector(
+            onTap: openPicker,
+            child: Container(
+              padding: EdgeInsets.all(8),
+              child: Row(
+                children: [
+                  Text(country.flag),
+                  SizedBox(width: 8),
+                  Text('+${country.dialCode}'),
+                ],
+              ),
+            ),
+          ),
+          // Phone input
+          Expanded(
+            child: TextField(
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Enter phone number',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  },
+)
+```
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -195,6 +310,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
+Copyright (c) 2025 Habeeb
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
@@ -206,4 +323,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you find this package helpful, please give it a star on GitHub and share it with others!
 
-For issues and feature requests, please use the [GitHub issue tracker](https://github.com/yourusername/custom_phone_field/issues).
+For issues and feature requests, please use the [GitHub issue tracker](https://github.com/habeeb/custom_phone_field/issues).
