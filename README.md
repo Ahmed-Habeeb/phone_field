@@ -14,7 +14,7 @@ and the Flutter guide for
 # Custom Phone Field
 
 [![pub package](https://img.shields.io/pub/v/custom_phone_field.svg)](https://pub.dev/packages/custom_phone_field)
-[![license](https://img.shields.io/github/license/habeeb/custom_phone_field.svg)](https://github.com/habeeb/custom_phone_field/blob/main/LICENSE)
+[![license](https://img.shields.io/github/license/habeeb/custom_phone_field.svg)](https://github.com/Ahmed-Habeeb/phone_field/blob/master/LICENSE)
 
 A beautiful and customizable phone number input field for Flutter applications. This package provides a ready-to-use phone input field with country selection, validation, and customization options.
 
